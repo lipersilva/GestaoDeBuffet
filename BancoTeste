@@ -213,8 +213,8 @@ CREATE TABLE IF NOT EXISTS `Buffet`.`orcamento` (
   PRIMARY KEY (`idorcamento`),
   INDEX `fk_orcamento_pacote1_idx` (`pacote_idpacote`),
   INDEX `fk_orcamento_pratoPac1_idx` (`pratoPac_idpratoPac`),
-  INDEX `fk_orcamento_buffet1_idx` (`buffet_idbuffet` ASC, `buffet_pessoa_idpessoa`),
-  INDEX `fk_orcamento_cliente1_idx` (`cliente_idcliente` ASC, `cliente_pessoa_idpessoa`),
+  INDEX `fk_orcamento_buffet1_idx` (`buffet_idbuffet`, `buffet_pessoa_idpessoa`),
+  INDEX `fk_orcamento_cliente1_idx` (`cliente_idcliente`, `cliente_pessoa_idpessoa`),
   CONSTRAINT `fk_orcamento_pacote1`
     FOREIGN KEY (`pacote_idpacote`)
     REFERENCES `Buffet`.`pacote` (`idpacote`)
